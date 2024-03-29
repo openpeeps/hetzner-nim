@@ -6,3 +6,5 @@ testresults/
 /tests/*
 !/tests/*.nim
 !/tests/*.nims
+.env
+endpoints.md
