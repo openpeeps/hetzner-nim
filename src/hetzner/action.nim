@@ -84,10 +84,17 @@ proc get*(client: ActionClient): Future[Actions] {.async.} =
   let res = await client.getHetzner()
   let body = await res.body
   fromJSON body, Actions
+  client.httpClient.close()
 
-proc `$`*(certs: Actions): string =
+proc `$`*(actions: Actions): string =
   ## Serialize available Actions
-  toJSON certs
+  toJSON actions
+
+proc len*(actions: Actions): int = 
+  actions.actions.len
+
+proc isEmpty*(actions: Actions): bool =
+  actions.actions.len == 0
 
 when isMainModule:
   import pkg/dotenv

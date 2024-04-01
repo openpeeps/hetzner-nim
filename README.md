@@ -1,30 +1,35 @@
 <p align="center">
-  <img src="https://github.com/openpeeps/PKG/blob/main/.github/logo.png" width="90px"><br>
-  OpenPeeps repository template for developing libraries,<br>projects and other cool things. 👑 Written in Nim language
+  <img src="https://github.com/openpeeps/hetzner-nim/blob/main/.github/hetzner.png" width="210px" height="210px"><br>
+  Asynchronous Nim 👑 client for interacting with the<a href="https://docs.hetzner.cloud/#overview">Hetzner Cloud API</a>
 </p>
 
 <p align="center">
-  <code>nimble install {PKG}</code>
+  <code>nimble install hetzner</code>
 </p>
 
 <p align="center">
   <a href="https://github.com/">API reference</a><br>
-  <img src="https://github.com/openpeeps/pistachio/workflows/test/badge.svg" alt="Github Actions">  <img src="https://github.com/openpeeps/pistachio/workflows/docs/badge.svg" alt="Github Actions">
+  <img src="https://github.com/openpeeps/hetnzer-nim/workflows/test/badge.svg" alt="Github Actions">  <img src="https://github.com/openpeeps/pistachio/hetnzer-nim/docs/badge.svg" alt="Github Actions">
 </p>
 
 ## 😍 Key Features
-- [x] Open Source | `MIT` License
-- [x] Written in Nim language
+- Intuitive API interface
+- Direct to Object serialization via `pkg/jsony`
+- Written in Nim 👑
 
 ## Examples
-...
+```nim
+import pkg/hetzner
+let hcloud = initHetzner(getEnv("api_key"))
+let: Certificates = waitFor hcloud.getCertificates()
+```
 
 ### ❤ Contributions & Support
-- 🐛 Found a bug? [Create a new Issue](/issues)
-- 👋 Wanna help? [Fork it!](/fork)
+- 🐛 Found a bug? [Create a new Issue](https://github.com/openpeeps/hetzner-nim/issues)
+- 👋 Wanna help? [Fork it!](https://github.com/openpeeps/hetzner-nim/fork)
 - 😎 [Get €20 in cloud credits from Hetzner](https://hetzner.cloud/?ref=Hm0mYGM9NxZ4)
 - 🥰 [Donate via PayPal address](https://www.paypal.com/donate/?hosted_button_id=RJK3ZTDWPL55C)
 
 ### 🎩 License
-{PKG} | MIT license. [Made by Humans from OpenPeeps](https://github.com/openpeeps).<br>
-Copyright &copy; 2023 OpenPeeps & Contributors &mdash; All rights reserved.
+MIT license. [Made by Humans from OpenPeeps](https://github.com/openpeeps).<br>
+Copyright &copy; 2024 OpenPeeps & Contributors &mdash; All rights reserved.

@@ -42,10 +42,17 @@ proc get*(client: CertificateClient): Future[Certificates] {.async.} =
   let res = await client.getHetzner()
   let body = await res.body
   fromJSON body, Certificates
+  client.httpClient.close()
 
 proc `$`*(certs: Certificates): string =
   ## Serialize available `Certificates`
   toJSON certs
+
+proc len*(certs: Certificates): int = 
+  certs.certificates.len
+
+proc isEmpty*(certs: Certificates): bool =
+  certs.certificates.len == 0
 
 when isMainModule:
   import pkg/dotenv

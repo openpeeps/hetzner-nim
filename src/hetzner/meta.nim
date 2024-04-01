@@ -1,7 +1,7 @@
 # Asynchronous Nim client for
 # interacting with the Hetzner Cloud API
 #
-# (c) 2023 George Lemon | MIT License
+# (c) 2024 George Lemon | MIT License
 #          Made by Humans from OpenPeeps
 #          https://github.com/openpeeps/hetzner-nim
 
@@ -29,6 +29,8 @@ type
 
     epNetworks = "networks"
     epNetwork = "networks/{$1}"
+
+    epPrices = "pricing"
 
   HetznerClient* = ref object of RootObj
     uri*: HetznerEndpoint
@@ -104,5 +106,4 @@ proc getHetzner*(client: HetznerClient): Future[AsyncResponse] {.async.} =
   ## Make a GET request using an instance of `HetznerClient`
   let uri = client.uri.endpoint(client.multiQuery, client.query)
   result = await client.httpClient.request(uri, HttpGet)
-  client.httpClient.close()
 
