@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="https://github.com/openpeeps/hetzner-nim/blob/main/.github/hetzner.png" width="210px" height="210px"><br>
-  Asynchronous Nim 👑 client for interacting with the<a href="https://docs.hetzner.cloud/#overview">Hetzner Cloud API</a>
+  <img src="https://github.com/openpeeps/hetzner-nim/blob/main/.github/hetzner.png" width="240px" height="240px"><br>
+  Asynchronous Nim 👑 client for interacting with the <a href="https://docs.hetzner.cloud/#overview">Hetzner Cloud API</a>
 </p>
 
 <p align="center">
