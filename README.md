@@ -9,7 +9,7 @@
 
 <p align="center">
   <a href="https://github.com/">API reference</a><br>
-  <img src="https://github.com/openpeeps/hetnzer-nim/workflows/test/badge.svg" alt="Github Actions">  <img src="https://github.com/openpeeps/pistachio/hetnzer-nim/docs/badge.svg" alt="Github Actions">
+  <img src="https://github.com/openpeeps/hetzner-nim/workflows/test/badge.svg" alt="Github Actions">  <img src="https://github.com/openpeeps/pistachio/hetzner-nim/docs/badge.svg" alt="Github Actions">
 </p>
 
 ## 😍 Key Features
